@@ -3,6 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_nav_graph">
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/fragmentList">
 
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.kinzlstanislav.csasucty.list.view.FragmentList"
+        android:label="FragmentList"
+        tools:layout="@layout/list_fragment" />
 </navigation>

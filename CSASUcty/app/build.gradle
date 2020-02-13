@@ -4,7 +4,7 @@ apply from: rootProject.file('common-module.gradle')
 
 android {
     defaultConfig {
-        applicationId "com.kinzlstanislav.hoslaviceo2"
+        applicationId "com.kinzlstanislav.csasucty"
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
