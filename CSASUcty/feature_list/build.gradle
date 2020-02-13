@@ -1,1 +1,5 @@
 apply from: rootProject.file('common-feature.gradle')
+
+dependencies {
+    implementation 'com.gtomato.android.library:carouselview:2.0.1'
+}
