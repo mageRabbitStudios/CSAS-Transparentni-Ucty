@@ -1,0 +1,15 @@
+apply from: rootProject.file('common-library.gradle')
+
+dependencies{
+
+    implementation Dependencies.coroutines
+    implementation Dependencies.coroutinesAndroidExtension
+
+    implementation TestDependencies.junit
+    implementation TestDependencies.mockitoInline
+    implementation TestDependencies.coroutinesTest
+    implementation TestDependencies.lifecycleTestHelpers
+    implementation TestDependencies.assertJ
+
+    implementation Dependencies.lifecycleLiveData
+}

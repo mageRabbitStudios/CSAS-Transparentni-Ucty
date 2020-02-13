@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- *************************************************************************************** -->
+    <!-- BASE APPLICATION THEME -->
+    <!-- *************************************************************************************** -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimaryDark">@color/app__dark_blue</item>
+        <item name="colorPrimary">@color/app__blue</item>
+        <item name="colorAccent">@color/app__blue</item>
+        <item name="android:textColorPrimary">@color/app__white</item>
+        <item name="android:statusBarColor">@color/app__dark_blue</item>
+    </style>
+
+    <!-- *************************************************************************************** -->
+    <!-- LAUNCH SCREEN THEME -->
+    <!-- *************************************************************************************** -->
+    <style name="AppTheme.Launcher">
+        <item name ="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!-- *************************************************************************************** -->
+    <!-- TEXT STYLES -->
+    <!-- *************************************************************************************** -->
+
+    <style name="AppTheme.Text.Errors" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/app__blue</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+</resources>

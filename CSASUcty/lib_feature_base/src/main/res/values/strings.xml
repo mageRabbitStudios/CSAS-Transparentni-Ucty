@@ -1,0 +1,4 @@
+<resources>
+    <string name="network_error">Network Error</string>
+    <string name="generic_error">Generic Error</string>
+</resources>

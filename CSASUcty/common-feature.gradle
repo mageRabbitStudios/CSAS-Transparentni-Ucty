@@ -1,0 +1,28 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
+
+apply from: rootProject.file('common-module.gradle')
+apply from: rootProject.file('test-settings-feature.gradle')
+
+dependencies {
+    implementation project(":lib_feature_base")
+    implementation project(":lib_architecture_repository")
+
+    implementation Dependencies.materialComponents
+    implementation Dependencies.appCompatsupportLibrary
+
+    implementation Dependencies.constraintLayout2Alpha
+    implementation Dependencies.recyclerView
+    implementation Dependencies.navigationUI
+    implementation Dependencies.navigationFragment
+
+    implementation Dependencies.lifecycleLiveData
+    implementation Dependencies.lifecycleViewModel
+    implementation Dependencies.androidXCoreKtx
+
+    implementation Dependencies.koin
+    implementation Dependencies.koinViewModel
+
+    testImplementation project(":lib_view_testing")
+    testImplementation TestDependencies.mockk
+}

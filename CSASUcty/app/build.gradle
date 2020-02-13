@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+apply from: rootProject.file('common-module.gradle')
+
+android {
+    defaultConfig {
+        applicationId "com.kinzlstanislav.hoslaviceo2"
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':feature_list')
+
+    implementation project(':lib_feature_base')
+    implementation project(":lib_architecture_repository")
+    implementation project(":lib_architecture_network")
+
+    implementation Dependencies.appCompatsupportLibrary
+
+    implementation Dependencies.navigationUI
+    implementation Dependencies.navigationFragment
+
+    implementation Dependencies.lifecycleViewModel
+
+    implementation Dependencies.okhttpLogging
+    implementation Dependencies.retrofit
+
+    implementation Dependencies.koin
+    implementation Dependencies.koinViewModel
+
+    implementation Dependencies.okhttpLogging
+
+    implementation Dependencies.moshi
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofitCoroutineAdapter
+    implementation Dependencies.retrofitMoshiAdapter
+
+    implementation Dependencies.roomRuntime
+}

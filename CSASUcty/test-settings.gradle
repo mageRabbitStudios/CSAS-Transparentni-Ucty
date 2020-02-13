@@ -1,0 +1,22 @@
+android {
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+            all {
+                // when you run ./gradlew tDUT, this will output nicely the test result
+                testLogging {
+                    events 'passed', 'skipped', 'failed'
+                    showStackTraces = true
+                    exceptionFormat = "full"
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    testImplementation TestDependencies.assertJ
+    testImplementation TestDependencies.lifecycleTestHelpers
+    testImplementation TestDependencies.mockk
+}
