@@ -25,7 +25,7 @@
         </FrameLayout>
 
         <ProgressBar
-            android:id="@+id/loader"
+            android:id="@+id/accounts_progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -34,7 +34,7 @@
             android:indeterminateTintMode="src_atop" />
 
         <TextView
-            android:id="@+id/generic_error"
+            android:id="@+id/accounts_generic_error"
             style="@style/AppTheme.Text.Errors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             android:text="@string/generic_error" />
 
         <TextView
-            android:id="@+id/network_error"
+            android:id="@+id/accounts_network_error"
             style="@style/AppTheme.Text.Errors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

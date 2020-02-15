@@ -7,7 +7,6 @@ import com.gtomato.android.ui.widget.CarouselView
 import com.kinzlstanislav.csasucty.base.extensions.animatePopIn
 import com.kinzlstanislav.csasucty.base.extensions.bindView
 import com.kinzlstanislav.csasucty.base.extensions.observe
-import com.kinzlstanislav.csasucty.base.extensions.showToast
 import com.kinzlstanislav.csasucty.base.view.BaseFragment
 import com.kinzlstanislav.csasucty.list.view.adapter.AccountListAdapter
 import com.kinzlstanislav.csasucty.list.viewmodel.ListViewModel
@@ -35,9 +34,9 @@ class FragmentList : BaseFragment() {
                     accountsAdapter.accounts = state.accounts.toMutableList()
                     carouselPageIndicator.text = "1/${accountsAdapter.itemCount}"
                 }
-                is LoadingAccounts -> loader
-                is NetworkError -> network_error
-                is GenericError -> generic_error
+                is LoadingAccounts -> accounts_progress_bar
+                is NetworkError -> accounts_network_error
+                is GenericError -> accounts_generic_error
             })
         })
         setupCarousel()
