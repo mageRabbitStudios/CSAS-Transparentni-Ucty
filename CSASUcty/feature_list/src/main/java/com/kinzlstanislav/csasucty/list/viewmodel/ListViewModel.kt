@@ -26,13 +26,13 @@ class ListViewModel(
         getAccounts()
     }
 
-    fun getAccounts() {
-        state.set(LoadingAccounts)
+    fun getAccounts() = with(state) {
+        set(LoadingAccounts)
         coroutine {
             try {
-                state.set(AccountsLoaded(accountsRepository.fetchAccounts()))
+                set(AccountsLoaded(accountsRepository.fetchAccounts()))
             } catch (e: Exception) {
-                state.set(if (e.isConnectionError()) NetworkError else GenericError)
+                set(if (e.isConnectionError()) NetworkError else GenericError)
             }
         }
     }

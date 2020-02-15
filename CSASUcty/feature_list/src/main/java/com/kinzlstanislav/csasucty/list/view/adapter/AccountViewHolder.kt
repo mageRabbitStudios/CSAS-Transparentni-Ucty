@@ -14,5 +14,9 @@ class AccountViewHolder(override val containerView: View) : RecyclerView.ViewHol
 
     fun bind(account: Account) {
         account_name.text = account.name
+        account_number.text = account.accountNumber
+        account_balance.text = account.balance.toString()
+        account_balance_currency.text = account.currency
+        transparency_from.text = account.transparencyFrom
     }
 }

@@ -29,4 +29,9 @@
         <item name="android:textSize">40sp</item>
     </style>
 
+    <style name="AppTheme.Text.CardText" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/app__black</item>
+    </style>
+
 </resources>
