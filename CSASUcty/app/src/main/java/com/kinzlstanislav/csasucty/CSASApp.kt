@@ -19,6 +19,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 open class CSASApp : Application() {
 
     private companion object {
+        // tohle bych mohl dat do configu a dynamicky je pouzivat podle build environment
         const val CSAS_BASE_URL = "https://webapi.developers.erstegroup.com/api/csas/public/sandbox/v3/"
         const val CSAS_API_KEY = "7ca45559-32c7-4818-875e-b6653f7155b5"
         const val CSAS_WEB_API_KEY_HEADER = "web-api-key"
