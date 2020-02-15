@@ -8,7 +8,6 @@ import com.kinzlstanislav.csasucty.base.extensions.coroutine
 import com.kinzlstanislav.csasucty.base.extensions.isConnectionError
 import com.kinzlstanislav.csasucty.base.extensions.set
 import com.kinzlstanislav.csasucty.list.viewmodel.ListViewModel.ListState.*
-import java.lang.Exception
 
 class ListViewModel(
     private val accountsRepository: AccountsRepository,
