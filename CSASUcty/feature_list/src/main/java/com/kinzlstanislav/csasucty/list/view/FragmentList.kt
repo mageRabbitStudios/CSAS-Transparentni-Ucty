@@ -33,7 +33,7 @@ class FragmentList : BaseFragment() {
                 is AccountsLoaded -> carousel_container.also {
                     carousel.animatePopIn()
                     accountsAdapter.accounts = state.accounts.toMutableList()
-                    carouselPageIndicator.text = "0/${accountsAdapter.itemCount}"
+                    carouselPageIndicator.text = "1/${accountsAdapter.itemCount}"
                 }
                 is LoadingAccounts -> loader
                 is NetworkError -> network_error
@@ -58,7 +58,7 @@ class FragmentList : BaseFragment() {
                     super.onScrolled(carouselView, position, adapterPosition, offset)
                     if (lastPosition != position) {
                         carouselPageIndicator.let {
-                            it.text = "$adapterPosition/${accountsAdapter.itemCount}"
+                            it.text = "${adapterPosition + 1}/${accountsAdapter.itemCount}"
                             // do a small pop
                             it.scaleX = 1f
                             it.scaleY = 1f
